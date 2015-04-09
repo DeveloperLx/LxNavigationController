@@ -56,6 +56,7 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     UIPanGestureRecognizer * _popGestureRecognizer;
     UIPercentDrivenInteractiveTransition * _interactivePopTransition;
 }
+@synthesize isTranslating = _isTranslating;
 
 - (instancetype)init
 {
@@ -157,6 +158,7 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     switch (popPan.state) {
         case UIGestureRecognizerStateBegan:
         {
+            _isTranslating = YES;
             _interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc]init];
             [self popViewControllerAnimated:YES];
             if (self.popGestureRecognizerBeginBlock) {
@@ -171,6 +173,7 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
             break;
         case UIGestureRecognizerStateFailed:
         {
+            _isTranslating = NO;
             if (self.popGestureRecognizerStopBlock) {
                 self.popGestureRecognizerStopBlock(LxNavigationControllerInteractionStopReasonFailed);
             }
@@ -191,7 +194,7 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
                 }
             }
             _interactivePopTransition = nil;
-            
+            _isTranslating = NO;
         }
             break;
     }
@@ -201,7 +204,8 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
 {
     if (gestureRecognizer == _popGestureRecognizer) {
         CGPoint location = [gestureRecognizer locationInView:gestureRecognizer.view];
-        if (location.x > gestureRecognizer.view.frame.size.width * MIN_VALID_PROPORTION) {
+        CGFloat translationX = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:gestureRecognizer.view].x;
+        if (location.x > gestureRecognizer.view.frame.size.width * MIN_VALID_PROPORTION || translationX < 0 || self.viewControllers.count < 2) {
             return NO;
         }
         else {
@@ -221,6 +225,11 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     else {
         return NO;
     }
+}
+
+- (BOOL)isTranslating
+{
+    return _isTranslating;
 }
 
 @end

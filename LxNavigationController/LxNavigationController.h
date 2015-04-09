@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, LxNavigationControllerInteractionStopReason) {
 
 @property (nonatomic,assign) BOOL popGestureRecognizerEnable;
 @property (nonatomic,assign) BOOL recognizeOtherGestureSimultaneously;
+@property (nonatomic,readonly) BOOL isTranslating;
 @property (nonatomic,copy) void (^popGestureRecognizerBeginBlock)();
 @property (nonatomic,copy) void (^popGestureRecognizerStopBlock)(LxNavigationControllerInteractionStopReason stopReason);
 
