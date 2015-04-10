@@ -232,4 +232,9 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     return _isTranslating;
 }
 
+- (UIViewController *)rootViewController
+{
+    return self.viewControllers.firstObject;
+}
+
 @end

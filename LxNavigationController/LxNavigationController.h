@@ -19,4 +19,6 @@ typedef NS_ENUM(NSInteger, LxNavigationControllerInteractionStopReason) {
 @property (nonatomic,copy) void (^popGestureRecognizerBeginBlock)();
 @property (nonatomic,copy) void (^popGestureRecognizerStopBlock)(LxNavigationControllerInteractionStopReason stopReason);
 
+@property (nonatomic,readonly) UINavigationController * rootViewController;
+
 @end
