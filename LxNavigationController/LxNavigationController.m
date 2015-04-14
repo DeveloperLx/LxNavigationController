@@ -34,7 +34,7 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     toViewController.view.alpha = fromViewController.view.alpha - 0.2;
     
     [UIView animateWithDuration:POP_ANIMATION_DURATION animations:^{
-        fromViewController.view.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
+        fromViewController.view.frame = CGRectMake(fromViewController.view.frame.size.width, fromViewController.view.frame.origin.y, fromViewController.view.frame.size.width, fromViewController.view.frame.size.height);
         toViewController.view.frame = toViewControllerViewFrame;
         toViewController.view.alpha = 1;
     } completion:^(BOOL finished) {
@@ -93,7 +93,6 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController
 {
     if (self = [super initWithRootViewController:rootViewController]) {
-        
         [self setup];
     }
     return self;
@@ -107,8 +106,6 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     _popGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(popGestureRecognizerTriggerd:)];
     _popGestureRecognizer.delegate = self;
     _popGestureRecognizer.cancelsTouchesInView = NO;
-//    _popGestureRecognizer.delaysTouchesBegan = NO;
-//    _popGestureRecognizer.delaysTouchesEnded = NO;
     _popGestureRecognizer.maximumNumberOfTouches = 1;
     [self.interactivePopGestureRecognizer.view addGestureRecognizer:_popGestureRecognizer];
 }
@@ -151,7 +148,7 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
 
 - (void)popGestureRecognizerTriggerd:(UIPanGestureRecognizer *)popPan
 {
-    CGFloat progress = [popPan translationInView:self.view].x / self.view.bounds.size.width;
+    CGFloat progress = [popPan translationInView:popPan.view].x / popPan.view.bounds.size.width;
     
     progress = MIN(1.0, MAX(0.0, progress));
     
