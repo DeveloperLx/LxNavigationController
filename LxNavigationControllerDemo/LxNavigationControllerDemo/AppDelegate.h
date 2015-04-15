@@ -1,9 +1,5 @@
 //
-//  AppDelegate.h
-//  LxNavigationControllerDemo
-//
-//  Created by Jin on 15-4-3.
-//  Copyright (c) 2015年 etiantian. All rights reserved.
+//  DeveloperLx
 //
 
 #import <UIKit/UIKit.h>
