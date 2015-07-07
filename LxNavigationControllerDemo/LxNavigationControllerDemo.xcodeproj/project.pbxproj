@@ -13,19 +13,8 @@
 		BFA813651ACE59E2004151D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA813631ACE59E2004151D7 /* Main.storyboard */; };
 		BFA813671ACE59E2004151D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA813661ACE59E2004151D7 /* Images.xcassets */; };
 		BFA8136A1ACE59E2004151D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA813681ACE59E2004151D7 /* LaunchScreen.xib */; };
-		BFA813761ACE59E2004151D7 /* LxNavigationControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA813751ACE59E2004151D7 /* LxNavigationControllerDemoTests.m */; };
 		BFA813811ACE5A48004151D7 /* LxNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA813801ACE5A48004151D7 /* LxNavigationController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BFA813701ACE59E2004151D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFA8134E1ACE59E2004151D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BFA813551ACE59E2004151D7;
-			remoteInfo = LxNavigationControllerDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BFA813561ACE59E2004151D7 /* LxNavigationControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LxNavigationControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,22 +27,12 @@
 		BFA813641ACE59E2004151D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFA813661ACE59E2004151D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFA813691ACE59E2004151D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BFA8136F1ACE59E2004151D7 /* LxNavigationControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LxNavigationControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFA813741ACE59E2004151D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFA813751ACE59E2004151D7 /* LxNavigationControllerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LxNavigationControllerDemoTests.m; sourceTree = "<group>"; };
 		BFA8137F1ACE5A48004151D7 /* LxNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LxNavigationController.h; path = ../../LxNavigationController/LxNavigationController.h; sourceTree = "<group>"; };
 		BFA813801ACE5A48004151D7 /* LxNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LxNavigationController.m; path = ../../LxNavigationController/LxNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BFA813531ACE59E2004151D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFA8136C1ACE59E2004151D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				BFA813581ACE59E2004151D7 /* LxNavigationControllerDemo */,
-				BFA813721ACE59E2004151D7 /* LxNavigationControllerDemoTests */,
 				BFA813571ACE59E2004151D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				BFA813561ACE59E2004151D7 /* LxNavigationControllerDemo.app */,
-				BFA8136F1ACE59E2004151D7 /* LxNavigationControllerDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,9 +66,6 @@
 				BFA8135E1ACE59E2004151D7 /* AppDelegate.m */,
 				BFA813601ACE59E2004151D7 /* ViewController.h */,
 				BFA813611ACE59E2004151D7 /* ViewController.m */,
-				BFA813631ACE59E2004151D7 /* Main.storyboard */,
-				BFA813661ACE59E2004151D7 /* Images.xcassets */,
-				BFA813681ACE59E2004151D7 /* LaunchScreen.xib */,
 				BFA813591ACE59E2004151D7 /* Supporting Files */,
 			);
 			path = LxNavigationControllerDemo;
@@ -100,25 +74,11 @@
 		BFA813591ACE59E2004151D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFA813681ACE59E2004151D7 /* LaunchScreen.xib */,
+				BFA813631ACE59E2004151D7 /* Main.storyboard */,
+				BFA813661ACE59E2004151D7 /* Images.xcassets */,
 				BFA8135A1ACE59E2004151D7 /* Info.plist */,
 				BFA8135B1ACE59E2004151D7 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BFA813721ACE59E2004151D7 /* LxNavigationControllerDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				BFA813751ACE59E2004151D7 /* LxNavigationControllerDemoTests.m */,
-				BFA813731ACE59E2004151D7 /* Supporting Files */,
-			);
-			path = LxNavigationControllerDemoTests;
-			sourceTree = "<group>";
-		};
-		BFA813731ACE59E2004151D7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BFA813741ACE59E2004151D7 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,24 +112,6 @@
 			productReference = BFA813561ACE59E2004151D7 /* LxNavigationControllerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BFA8136E1ACE59E2004151D7 /* LxNavigationControllerDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BFA8137C1ACE59E2004151D7 /* Build configuration list for PBXNativeTarget "LxNavigationControllerDemoTests" */;
-			buildPhases = (
-				BFA8136B1ACE59E2004151D7 /* Sources */,
-				BFA8136C1ACE59E2004151D7 /* Frameworks */,
-				BFA8136D1ACE59E2004151D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BFA813711ACE59E2004151D7 /* PBXTargetDependency */,
-			);
-			name = LxNavigationControllerDemoTests;
-			productName = LxNavigationControllerDemoTests;
-			productReference = BFA8136F1ACE59E2004151D7 /* LxNavigationControllerDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,10 +123,6 @@
 				TargetAttributes = {
 					BFA813551ACE59E2004151D7 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					BFA8136E1ACE59E2004151D7 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = BFA813551ACE59E2004151D7;
 					};
 				};
 			};
@@ -202,7 +140,6 @@
 			projectRoot = "";
 			targets = (
 				BFA813551ACE59E2004151D7 /* LxNavigationControllerDemo */,
-				BFA8136E1ACE59E2004151D7 /* LxNavigationControllerDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,13 +152,6 @@
 				BFA813651ACE59E2004151D7 /* Main.storyboard in Resources */,
 				BFA8136A1ACE59E2004151D7 /* LaunchScreen.xib in Resources */,
 				BFA813671ACE59E2004151D7 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFA8136D1ACE59E2004151D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,23 +169,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFA8136B1ACE59E2004151D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFA813761ACE59E2004151D7 /* LxNavigationControllerDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BFA813711ACE59E2004151D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BFA813551ACE59E2004151D7 /* LxNavigationControllerDemo */;
-			targetProxy = BFA813701ACE59E2004151D7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BFA813631ACE59E2004151D7 /* Main.storyboard */ = {
@@ -377,40 +291,6 @@
 			};
 			name = Release;
 		};
-		BFA8137D1ACE59E2004151D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LxNavigationControllerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LxNavigationControllerDemo.app/LxNavigationControllerDemo";
-			};
-			name = Debug;
-		};
-		BFA8137E1ACE59E2004151D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LxNavigationControllerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LxNavigationControllerDemo.app/LxNavigationControllerDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -428,15 +308,6 @@
 			buildConfigurations = (
 				BFA8137A1ACE59E2004151D7 /* Debug */,
 				BFA8137B1ACE59E2004151D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BFA8137C1ACE59E2004151D7 /* Build configuration list for PBXNativeTarget "LxNavigationControllerDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BFA8137D1ACE59E2004151D7 /* Debug */,
-				BFA8137E1ACE59E2004151D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

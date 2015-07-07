@@ -1,5 +1,8 @@
 # LxNavigationController
     A convenient navigationController inherited from UINavigationController. LxNavigationController add a powerful gesture you can pop view controller only if you sweep the screen from left the right.
+    
+*	![demo](demo.gif)
+
 Installation
 ------------
     You only need drag LxNavigationController.h and LxNavigationController.m to your project.
