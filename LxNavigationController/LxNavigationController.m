@@ -5,7 +5,7 @@
 
 #import "LxNavigationController.h"
 
-static CGFloat const POP_ANIMATION_DURATION = 0.2;
+static NSTimeInterval const POP_ANIMATION_DURATION = 0.2;
 static CGFloat const MIN_VALID_PROPORTION = 0.42;
 
 @interface PopTransition : NSObject <UIViewControllerAnimatedTransitioning>
@@ -90,14 +90,6 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     return self;
 }
 
-- (instancetype)initWithRootViewController:(UIViewController *)rootViewController
-{
-    if (self = [super initWithRootViewController:rootViewController]) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void)setup
 {
     self.delegate = self;
@@ -111,16 +103,6 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
 }
 
 #pragma mark - UINavigationControllerDelegate
-
-- (void)setPopGestureRecognizerEnable:(BOOL)popGestureRecognizerEnable
-{
-    _popGestureRecognizer.enabled = popGestureRecognizerEnable;
-}
-
-- (BOOL)popGestureRecognizerEnable
-{
-    return _popGestureRecognizer.enabled;
-}
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                          interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
@@ -144,6 +126,18 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
     else {
         return nil;
     }
+}
+
+#pragma mark - gesture
+
+- (void)setPopGestureRecognizerEnable:(BOOL)popGestureRecognizerEnable
+{
+    _popGestureRecognizer.enabled = popGestureRecognizerEnable;
+}
+
+- (BOOL)popGestureRecognizerEnable
+{
+    return _popGestureRecognizer.enabled;
 }
 
 - (void)popGestureRecognizerTriggerd:(UIPanGestureRecognizer *)popPan
@@ -223,6 +217,8 @@ static CGFloat const MIN_VALID_PROPORTION = 0.42;
         return NO;
     }
 }
+
+#pragma mark - 
 
 - (BOOL)isTranslating
 {
