@@ -6,6 +6,9 @@
 Installation
 ------------
     You only need drag LxNavigationController.h and LxNavigationController.m to your project.
+Podfile
+------------
+    pod 'LxNavigationController', '~> 1.0.0'
 Support
 ------------
     Minimum support iOS version: iOS 7.0
